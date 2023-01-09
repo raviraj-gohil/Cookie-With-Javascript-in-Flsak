@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script src="./static/javascript.js"></script>-->
+    <script>
+        function createCookie() {
+          document.cookie = "username="+document.getElementsByName("name");
+          return true;
+        }
+    </script>
+</head>
+<body>
+<form action="{{ url_for('success') }}" onsubmit="createCookie()" method="post">
+    <h2>
+        <input name = "name" placeholder="Enter Name" type="text" id="fname">
+    </h2>
+    <h2>
+        <input name="password" type="password" placeholder="Password">
+    </h2>
+    <h2>
+        <input type="submit" value="Submit">
+    </h2>
+</form>
+</body>
+</html>
